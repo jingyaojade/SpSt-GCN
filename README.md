@@ -70,6 +70,10 @@ If you want to restart training from the saved checkpoint last time, you can run
 ```
 python main.py -c <config> -r
 ```
+## Merge the results of multiple branches
+```
+python fusion.py
+```
 ## Evaluate
 Before evaluating, you should ensure that the trained model corresponding the config is already existed in the <--pretrained_path> or '<--work_dir>' folder. Then run
 ```
