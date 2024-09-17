@@ -1,5 +1,6 @@
 # Paper
 Wang, Jingyao, Issam Falih, and Emmanuel Bergeret. "Skeleton-Based Action Recognition with Spatial-Structural Graph Convolution." 2024 International Joint Conference on Neural Networks (IJCNN). IEEE, 2024.
+link: https://arxiv.org/pdf/2407.21525
 
 # Prerequisites
 ## Libraries
