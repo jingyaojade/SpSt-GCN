@@ -1,0 +1,78 @@
+config: 2001_J
+dataset: ntu-xsub
+dataset_args:
+  ntu:
+    eval_batch_size: 16
+    inputs: J
+    ntu120_path: D:/publication1/data/nturgbd_skeletons_s018_to_s032
+    ntu60_path: D:/publication1/data/nturgbd_skeletons_s001_to_s017
+    num_frame: 288
+    root_folder: D:/publication1/ss_GCN/data/npy_dataset
+    train_batch_size: 16
+    transform: false
+debug: false
+delay_hours: 0
+evaluate: false
+extract: true
+generate_data: false
+gpus:
+- 0
+lr_scheduler: cosine
+model_args:
+  act_type: swish
+  att_type: stja
+  bias: true
+  block_args:
+  - - 48
+    - 1
+    - 0.5
+  - - 64
+    - 1
+    - 0.5
+  - - 128
+    - 2
+    - 1
+  - - 256
+    - 2
+    - 1
+  drop_prob: 0.25
+  edge: true
+  expand_ratio: 0
+  fusion_stage: 4
+  kernel_size:
+  - 5
+  - 2
+  layer_type: SG
+  reduct_ratio: 2
+  scale_args:
+  - 1.2
+  - 1.35
+  stem_channel: 24
+model_type: EfficientGCN-B0
+no_progress_bar: false
+optimizer: SGD
+optimizer_args:
+  Adam:
+    betas:
+    - 0.9
+    - 0.99
+    lr: 0.1
+    weight_decay: 0.0001
+  SGD:
+    lr: 0.1
+    momentum: 0.9
+    nesterov: true
+    weight_decay: 0.0001
+pretrained_path: null
+resume: false
+scheduler_args:
+  cosine:
+    max_epoch: 50
+    warm_up: 10
+seed: 1
+visualization_class: 0
+visualization_frames:
+- 50
+visualization_sample: 8
+visualize: true
+work_dir: D:/publication1/ss_GCN
